@@ -1,0 +1,240 @@
+
+/*nav bar style and header style*/
+/* z-index property specifies the stack order of an element*/
+
+header{
+    background-color: transparent;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 5;
+}
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .85);
+    transform: translateY(-200%);
+    transition: 0.1s;
+}
+body{
+    font-family: 'Spectral';
+}
+body.scroll header.sticky{
+    transform: translateY(0);
+}
+.nav-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 0;   
+}
+nav ul li a {
+    font-size: 17px;
+    line-height: 22px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    border-bottom: 1px solid white;
+    color: blue;
+}
+img.logo.covermain{
+    background-color: none;
+}
+/* parralax*/
+ 
+ /* vh means visible height -- linear gradient '0' means 
+itll go all black 0.5 makes it a lighter effect and not completly black*/
+.cover-main{
+    background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(2, 2, 2, 0.7)), url(https://i.ytimg.com/vi/S6Q-kGzr8W4/maxresdefault.jpg);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li.layer.name{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+   line-height: 45px;
+    text-transform: uppercase;
+    width: 100%;
+}
+ul#scene{
+    margin-top: 100px;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+.portfolio-btn{
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+     margin-right: 30px;
+}
+/*parallax end*/
+
+
+/*masonry styles*/
+.masonry-grid{
+    position: relative;
+}
+.grid{
+    margin: 0 auto;
+    /*background-color: black;*/
+}
+.grid-item{
+    width: 350px;
+}
+* img{
+    max-width: 100%;
+}
+h2.sub-title{
+    position: relative;
+    display: block;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+}
+/* psuedo class*/
+
+h2.sub-title::after {
+    display: block;
+    height: 3px;
+    background-color: black;
+    content: "";
+    width: 150px;
+    margin: 30px auto 0 auto;
+}
+/* masonry styles end*/
+
+/* svg animation start*/
+section.beating-ball{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://www.realmadrid.com/img/horizontal_940px/copas_de_europa_900x400.jpg')no-repeat right bottom / cover;
+    text-align: center;
+    height: 100vh;
+    padding: 50px 10px;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+section.beating-ball h2::after{
+    background: white;
+}
+.ball{
+   position: relative;
+   width: 150px;
+   margin: 0 auto;
+   animation: pulse 1s infinite; 
+   padding-top: 2%;
+}
+section.beatingball h2{
+    margin-bottom: 30px; 
+}
+section.beatingball span{
+    font-size: 100px;
+    line-height: 105px;
+}
+/* this will give ball the pulse effect
+the scale(2) will double in size from the
+.ball width*/
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    15%{
+        transform: scale(1.25);
+        }
+    25%{
+        transform: scale(1.15);
+    }   
+    35%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+h2.title{
+    color: white;
+    font-size: 35px;
+}
+/* slider*/
+.slide-div h2{
+    margin-bottom: 0;
+}
+h2.sub-title{
+    color: black;
+}
+#slider{
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.slide{
+    max-height: 300px;
+    padding: 15px;
+}
+.slick-prev,.slick-next{
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+.slick-prev{
+    left: 0;
+}
+.slick-next{
+    right:0;
+}
+.slick-prev:hover{
+    background-color: red;
+}
+.slick-next:hover{
+    background-color: red;
+}
+/*footer*/
+footer{
+    position: relative;
+    z-index: -2;
+    height: 150px;
+    background-color: black;
+}
+footer h1{
+    position: fixed;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold; 
+    bottom: 50px;
+}
+
+
+
+
+
+
+
